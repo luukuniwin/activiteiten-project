@@ -1,0 +1,350 @@
+/*
+* Author: Luuk Vesters
+* Date: 12/6/2023
+* File: stylesheet.css
+*/
+
+/* Use font face to use custom font */
+@font-face
+{
+    font-family: 'Sintony';
+    src: url('../fonts/Sintony-regular.ttf');
+}
+@font-face
+{
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald-Regular.ttf');
+}
+
+body
+{
+    padding: 0;
+    margin: 0;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    color: #1C8CCA;
+}
+
+main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sintony', sans-serif;
+}
+
+/* login form */
+/* floating background effect login form */
+#form-container, #content-container
+{
+    background-color: white;
+    border-radius: 15px;
+    padding: 50px;
+    box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.2);
+    font-family: 'Sintony';
+    margin-bottom: 220px;
+}
+
+/* form */
+#login-form
+{
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* "Login" */
+#login-form h2
+{
+    color: black;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* spacing between username and password */
+#login-form .form-group
+{
+    margin-bottom: 10px;
+}
+
+/* color username and password */
+#login-form label
+{
+    color: #010040;
+}
+
+/* styling input field username and password */
+input[type="text"], input[type="password"]
+{
+    width: 80%;
+    padding: 10px;
+    border: none;
+    background-color: #f2f2f2;
+    color: #010040;
+    border-radius: 5px;
+}
+
+/* styling error message */
+#login-form p
+{
+    text-align: center;
+    color: #010072;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/*****************/
+/* 2. Navigation */
+/*****************/
+header
+{
+    background-color: #1C8CCA;
+}
+/* navigation styling */
+
+.logo
+{
+    width: 80px;
+    margin-top: -14%;
+    margin-right: 20%;
+
+}
+/* Nav styling and positioning */
+nav
+{
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    justify-content: space-between;
+    padding: 40px 32px 0 32px;
+    margin-bottom: 32px;
+    z-index: 900;
+}
+
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+ul li
+{
+    margin-right: 15px;
+    position: relative;
+}
+
+/* text in navigation styling */
+nav li a
+{
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 1.2em;
+}
+
+/* On text hover animation to orange */
+li a:hover
+{
+    transition: 0.3s ease;
+}
+/* hover line effect nav */
+nav a::after
+{
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: 45%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+nav a:hover::after
+{
+    width: 100%;
+}
+
+#active::after
+{
+    width: 100%;
+}
+
+/* Styling button  */
+.button-style-1
+{
+    display: inline-block;
+    border: 2px solid #1C8CCA;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 40px;
+    padding: 8px 30px;
+    text-decoration: none;
+    color: #1C8CCA;
+    margin-left: 20px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px;
+}
+
+/* Styling button on hover */
+.button-style-1:hover
+{
+    border-color: white;
+    transition: 0.3s ease;
+}
+
+/* Styling button  */
+.button-style-2
+{
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 40px;
+    padding: 8px 30px;
+    text-decoration: none;
+    color: white;
+    background-color: #1C8CCA;
+    border: 2px solid #1C8CCA;
+    margin-left: 10px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px;
+}
+
+/* Styling button on hover */
+.button-style-2:hover
+{
+    background-color: white;
+    border: 2px solid white;
+    transition: 0.3s ease;
+    color: #186e9d;
+}
+/* footer styling and positioning */
+footer
+{
+    color: white;
+    margin-top: 100px;
+    width: 100%;
+    background-color:#1C8CCA ;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Oswald';
+    position: fixed;
+    bottom: 0;
+}
+
+/* activity table styling and positioning*/
+table
+{
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid;
+    width: 100%;
+    margin-bottom: 190px;
+}
+
+td, th
+{
+    padding: 10px;
+    border: 1px solid;
+}
+
+th
+{
+    background-color: #1C8CCA;
+    color: white;
+}
+
+tr:nth-child(even)
+{
+    background-color: #f2f2f2;
+}
+
+/* image on home page positioning */
+#headerImg
+{
+    width: 50%;
+    border-radius: 25px;
+    margin: auto;
+    display: block;
+}
+
+.content
+{
+    text-align: center;
+}
+
+/* responsive media query */
+@media only screen and (max-width: 768px)
+{
+    nav
+    {
+        font-size: 1em;
+        width: 80%;
+    }
+    footer
+    {
+        font-size: 0.9em;
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    #headerImg
+    {
+        height: 70%;
+        width: 70%;
+        margin-left: 50px;
+    }
+
+    table
+    {
+        width: 40%;
+        margin-left: 0%;
+        font-size: 0.60em;
+    }
+
+    input[type="text"]
+    {
+        width: 80%;
+        text-align: center;
+    }
+
+    fieldset
+    {
+        width: 80%;
+        margin-left: 6%;
+    }
+
+    .button-style-2
+    {
+        display: inline-block;
+        font-family: 'Oswald', sans-serif;
+        border-radius: 5px;
+        padding: 3px 5px;
+        text-decoration: none;
+        color: white;
+        background-color: #1C8CCA;
+        border: 2px solid #1C8CCA;
+        margin-left: 10px;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px;
+    }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape)
+{
+    footer
+    {
+        width: 100%;
+    }
+
+    header
+    {
+        width: 100%;
+    }
+}
